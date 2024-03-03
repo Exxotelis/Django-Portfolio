@@ -8,12 +8,12 @@ build:
 
 # Run Settings
 run:
-  web: gunicorn exxotelis.wsgi:application
+  web: gunicorn myproject.wsgi:application
 
 # Environment Variables
 env:
-  DJANGO_SECRET_KEY: "django-insecure-0e@3ibvy%3+#^1xefvwnj3z^o*^5^27vpva0q(=#!4r3x=%q@!"
-  DATABASE_URL: "postgresql://your_database_user:your_database_password@localhost:5432/your_database_name"
+  - DJANGO_SECRET_KEY=django-insecure-0e@3ibvy%3+#^1xefvwnj3z^o*^5^27vpva0q(=#!4r3x=%q@!
+  - DATABASE_URL=postgresql://your_database_user:your_database_password@localhost:5432/your_database_name
 
 # Dependencies
 dependencies:
@@ -28,3 +28,4 @@ deploy:
     commands:
       - python manage.py migrate
       - python manage.py collectstatic --no-input
+
