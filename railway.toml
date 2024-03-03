@@ -1,32 +1,29 @@
 # Railway Config File for Django Project
 
 # Build Settings
-[build]
-  [build.steps]
-    [[build.steps]]
-    name = "Install Dependencies"
-    command = "pip install -r requirements.txt"
+build:
+  steps:
+    - name: Install Dependencies
+      command: pip install -r requirements.txt
 
 # Run Settings
-[run]
-  web = "gunicorn exxotelis.wsgi:application"
+run:
+  web: gunicorn exxotelis.wsgi:application
 
 # Environment Variables
-[env]
-DJANGO_SECRET_KEY = "django-insecure-0e@3ibvy%3+#^1xefvwnj3z^o*^5^27vpva0q(=#!4r3x=%q@!"
-DATABASE_URL = "postgresql://your_database_user:your_database_password@localhost:5432/your_database_name"
+env:
+  DJANGO_SECRET_KEY: "django-insecure-0e@3ibvy%3+#^1xefvwnj3z^o*^5^27vpva0q(=#!4r3x=%q@!"
+  DATABASE_URL: "sqlite:///db.sqlite3"
 
 # Dependencies
-[dependencies]
-  [dependencies.python]
-  version = "3.8"
-  [dependencies.postgresql]
-  version = "13"
+dependencies:
+  python:
+    version: 3.8
 
 # Deployment Settings
-[deploy.production]
-branch = "main"
-commands = [
-  "python manage.py migrate",
-  "python manage.py collectstatic --no-input"
-]
+deploy:
+  production:
+    branch: main
+    commands:
+      - python manage.py migrate
+      - python manage.py collectstatic --no-input
