@@ -8,7 +8,7 @@ build:
 
 # Run Settings
 run:
-  web: gunicorn myproject.wsgi:application
+  web: gunicorn exxotelis.wsgi:application
 
 # Environment Variables
 env:
