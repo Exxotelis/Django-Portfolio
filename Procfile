@@ -1,1 +1,2 @@
-gunicorn exxotelis.wsgi:application
+web: gunicorn exxotelis.wsgi:application
+
