@@ -30,7 +30,7 @@ I built a web portfolio using Flask to showcase my projects, skills, and experie
 Feel free to reach out to me with any inquiries, opportunities, or collaborations!
 
 
-- LinkedIn: [Exxotelis](https://www.linkedin.com/in/exxotelis)
+- LinkedIn: [Exxotelis](https://www.linkedin.com/in/exxotelis/Django-Portfolio)
 
 ## Setup
 
