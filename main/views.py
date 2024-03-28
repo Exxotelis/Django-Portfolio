@@ -9,3 +9,6 @@ def index(request):
 
 def about_me(request):
     return render(request, 'main/about-me.html')
+
+def photo_gallery(request):
+    return render(request, 'main/photos.html')
